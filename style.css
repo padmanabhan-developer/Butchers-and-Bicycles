@@ -1250,9 +1250,9 @@ z-index:1;
 
 #sidebar{float:left; position:fixed; /*position:absolute;*/ left:0; top:30px; background:#fff; height:100%; width:128px; z-index:99;}
 .sidebar_top{float:left; height:85px; width:128px;}
-.builder_box{float:left; width:30px; height:85px;}
+.builder_box{float:left; width:30px; height:85px; display: none;}
 .builder_button{float:left; width:30px; height:85px; background:url(images/builder.png) no-repeat;}
-.cart_box{float:left; width:98px; height:85px; background:#2b2b2b; position:relative;}
+.cart_box{float:left; width:100%; height:85px; background:#2b2b2b; position:relative;}
 /*.cart_icon{float:left; width:100%; height:100%; background:url(images/cart_icon.png) no-repeat center center;}
 .cart_quantity{text-align:center; background:none; border:solid 2px #f26c4f; width:23px; height:23px; line-height:19px;
 -webkit-border-radius: 100%;
