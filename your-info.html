@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Butchersnbikes</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!--slider-->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+ <script src="js/jquery-1.10.2.js"></script>
+   <!--chat dropdown--> 
+<script type="text/javascript" src="js/slider.js"></script>
+ <script>
+$(function() {
+    $("a").on("click", function() {
+		
+      var $parent = $(this).parent();
+        if ($parent.hasClass('active')) {
+            $parent.removeClass('active');
+        }
+        else{$parent.addClass('active');}
+      
+    });
+});
+</script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+			$(".dropdown dt#dt3 .select-button").click(function() {
+                $(".dropdown dd#dd3").toggle();
+            });
+            
+			$(".dropdown dd#dd3 ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt#dt3 .select-button").html(text);
+                $(".dropdown dd#dd3").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			function getSelectedValue(id) {
+                return $("#" + id).find("dt#dt3 a span.value").html();
+            }
+			$(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd#dd3").hide();
+            });
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/menu.css">  
+</head>
+<body class="common"> 
+ <div id="wrapper">
+ 
+ 		<div class="nav-1 nav-collapse">
+ 	  <div id="sidebar">
+      	   <div class="sidebar_top">
+           		<div class="builder_box">
+                	 <div class="main-menu">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+            <li class="has-children">
+              <a href="#"><button class="dropdown-toggle" aria-expanded="false"></button></a>
+              <ul class="sub-menu">
+              	<li class="menu_title">Bike<br />builder</li>
+                <li><a href="builder.html">MK1<button class="dropdown-toggle" aria-expanded="false"></button></a>
+                </li>
+                <li><a href="builder.html">MK1-E</a>
+                </li>
+                <li><a href="builder.html">MK1-E pro</a>
+                	
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+        
+      </div><!-- .mixed-menu -->
+      </div>
+                </div>
+                
+                <div class="cart_box">
+                	 <a href="#" class="cart_icon"></a>
+                     <span class="cart_quantity">22</span>
+                </div>
+           </div><!--close sidebar_top-->
+           
+           <div class="sidebar_bottom">
+           		<div class="main-menu">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+            <li><a href="about.html">about us</a></li>
+            <li class="has-children">
+              <a href="products.html">products<button class="dropdown-toggle" aria-expanded="false"></button></a>
+              <ul class="sub-menu">
+                <li><a href="#">MK1</a></li>
+                <li><a href="#">MK1-E</a></li>
+                <li><a href="#">MK1-E pro</a></li>
+                <li><a href="#">Accesories</a></li>
+              </ul>
+            </li>
+            <li><a href="techspecs.html">tech info</a></li>
+            <li><a href="dealers.html">dealers</a></li>
+            <li><a href="help.html">help</a></li>
+            <li><a href="follow us.html">follow us</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="downloads.html">downloads</a></li>
+          </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+        
+      </div><!-- .mixed-menu -->
+      </div><!-- main-menu -->
+           </div><!--close sidebar_bottom-->
+      </div><!--close sidebar-->
+      </div>
+ 
+ 
+ 	  <div id="header">
+      	   <div class="container">
+           		<div class="header_left">
+                	 <dl id="sample" class="dropdown">
+                        <dt id="dt3"><span class="select-button">EN</span></dt>
+                        <dd id="dd3">
+                           <ul>
+                                <li><a href="javascript:void(0);">language1</a></li>
+                                <li><a href="javascript:void(0);">language2</a></li>
+                                <li><a href="javascript:void(0);">language3</a></li>
+                                <li><a href="javascript:void(0);">language4</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div><!--close header_left-->
+                
+                <a href="index.html" class="logo3"><img src="images/logo3.png" alt="" /></a>
+                
+                <div class="header_right">
+                	 <div id="button">
+                     
+                          <a href="#" class="menu_class">Chat Support</a>
+                          <div class="the_menu">
+                    			<div class="chat_box">
+                                      <div class="chat_top">
+                                      
+                                      <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller content">
+                    <h5>Morten - 17.25</h5>
+                                                <h6>Thanks for contacting us. My name is Morten, how can I help you?</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+                                           
+                                      </div><!--close chat_top-->
+                                      
+                                      <div class="chat_bottom">
+                                           <span class="chat_form"><textarea name="" cols="" rows="" class="chat_textarea" value="Hello ..." onfocus="if (this.value == 'Hello ...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Hello ...';}">Hello ...</textarea></span>
+                                           <span class="chat_form"><button class="button1 chat_button">send</button></span>
+                                      </div><!--close chat_bottom-->
+                                 </div><!--close chat_box-->
+                          </div><!--close the_menu-->
+                    </div><!--close button-->
+                </div><!--close header_right-->
+           </div><!--close container-->
+      </div><!--close header-->
+      
+      
+     
+     <div id="content">
+     	  <div class="container">
+          	   <div class="gray_bg">
+               		
+                    <div class="thankyou">
+                    	<a href="#" class="back">return to builder</a>
+                    	<div class="logo2"><a href="index.html"><img src="images/logo2.png" alt=""></a></div>
+                        <div class="thankyou_inner">
+                             <div class="thankyou_left your_info_left">
+                                  <h1>your mk1</h1>
+                                  
+                                  <h5>Frame</h5>
+                                  <h6>White</h6>
+                                  
+                                  <h5>seat</h5>
+                                  <h6>Black</h6>
+                                  
+                                  <h5>Spokes</h5>
+                                  <h6>Black Sliver</h6>
+                                  
+                                  <h5>gears</h5>
+                                  <h6>36 Shimano Excess</h6>
+                                  
+                                  <h5>Frame</h5>
+                                  <h6>White</h6>
+                                  
+                                  <h5>seat</h5>
+                                  <h6>Black</h6>
+                                  
+                                  <h5>Spokes</h5>
+                                  <h6>Black Sliver</h6>
+                                  
+                                  <div class="thankyou_left_bottom">
+                                  	   <h3>your price</h3>
+                                       <h4>€2,126.00</h4>
+                                  </div>
+                             </div><!--close thankyou_left-->
+                             
+                             <div class="your_info_right">
+                             	  <h1>your info</h1>
+                                  <div class="form_row">
+                                  	   <div class="col-3"><input type="text" class="input1" name="name" id="name"  value="Methuselah Gibbons" onfocus="if (this.value == 'Methuselah Gibbons') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Methuselah Gibbons';}" /></div>
+                                       <div class="col-3">
+                                       <select name="">
+                                       		<option>Select country</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                       </select>
+                                       </div>
+                                       <div class="col-3">
+                                       <select name="">
+                                       		<option>Pickup location</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                            <option>country1</option>
+                                       </select>
+                                       </div>
+                                  </div><!--close form_row-->
+                                  
+                                  <div class="form_row">
+                                  	   <div class="col-3"><input type="text" class="input1" name="name" id="name"  value="Address" onfocus="if (this.value == 'Address') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Address';}" /></div>
+                                       <div class="col-3"><input type="text" class="input1" name="name" id="name"  value="Zip Code" onfocus="if (this.value == 'Zip Code') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Zip Code';}" /></div>
+                                       <div class="col-3"><input type="text" class="input1" name="name" id="name"  value="City" onfocus="if (this.value == 'City') {this.value = '';}" onblur="if (this.value == '') {this.value = 'City';}" /></div>
+                                  </div><!--close form_row-->
+                                  
+                                  <div class="form_row">
+                                  	   <div class="col-3 blank">&nbsp;</div>
+                                       <div class="col-3"><input type="text" class="input1" name="name" id="name"  value="Phone" onfocus="if (this.value == 'Phone') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Phone';}" /></div>
+                                       <div class="col-3"><input type="text" class="input1" name="name" id="name"  value="Mail" onfocus="if (this.value == 'Mail') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Mail';}" /></div>
+                                  </div><!--close form_row-->
+                                  
+                                  <div class="form_row">
+                                  	   <div class="col-12"><textarea name="" cols="" rows="" class="textarea" value="Special requests" onfocus="if (this.value == 'Special requests') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Special requests';}" >Special requests</textarea></div>
+                                  </div><!--close form_row-->
+                                  
+                                  <div class="form_row">
+                                  	   <div class="col-12"><button class="button1 order-button">place order</button></div>
+                                  </div><!--close form_row-->
+                             </div><!--close your_info_right-->
+                         </div><!--close thankyou_inner-->
+                    </div><!--close thankyou-->
+               </div><!--close gray_bg-->
+          </div><!--close container-->
+     </div><!--close content-->
+      
+     
+     <div id="footer">
+     	  <div class="container">
+          	   <div class="footer_inner">
+               		<div class="footer_row">
+                    	 <div class="footer_box">
+                         	  <h4>about</h4>
+                              <ul>
+                              		<li><a href="#">About us</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Dealers</a></li>
+                                    <li><a href="#">Contact</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_box">
+                         	  <h4>Products</h4>
+                              <ul>
+                              		<li><a href="#">Mk1</a></li>
+                                    <li><a href="#">Mk1-E</a></li>
+                                    <li><a href="#">Mk1-e pro</a></li>
+                                    <li><a href="#">Accesories</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_box">
+                         	  <h4>help</h4>
+                              <ul>
+                              		<li><a href="#">FAQ’s</a></li>
+                                    <li><a href="#">Shipping and delivery terms</a></li>
+                                    <li><a href="#">Warranty terms</a></li>
+                                    <li><a href="#">Payment terms</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_box">
+                         	  <h4>join our mailing list</h4>
+                              <span class="footer_search"><input name="" type="text" class="search_input" value="Your E-mail" onfocus="if (this.value == 'Your E-mail') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your E-mail';}"/></span>
+                              <span class="footer_social">
+                              	  <a href="#" class="icon1"></a>
+                                  <a href="#" class="icon2"></a>
+                                  <a href="#" class="icon3"></a>
+                                  <a href="#" class="icon4"></a>
+                              </span>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_mobile1">
+                         	  <ul>
+                              		<li><a href="#">About us</a></li>
+                                    <li><a href="#">Dealers</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">Help</a></li>
+                              </ul>
+                         </div>
+                         <div class="footer_mobile2">
+                         	   <a href="#" class="icon1"></a>
+                               <a href="#" class="icon2"></a><br />
+                               <a href="#" class="icon3"></a>
+                               <a href="#" class="icon4"></a>
+                         </div>
+                    </div><!--close footer_row-->
+               </div><!--close footer_inner-->
+          </div><!--close container-->
+     </div><!--close footer-->
+      
+ </div><!--close wrapper-->
+  <script src="js/baron.js"></script>
+<script src="js/script.js"></script> 
+<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+<script type="text/javascript">
+		$(function () {
+			$("select").selectbox();
+		});
+</script>    
+<!--responsive navigation-->
+<link rel="stylesheet" href="responsive-nav.css" />
+<script src="js/responsive-nav.js" type="text/javascript"></script>
+
+<!--responsive navigation-->
+   <script src="js/index.js"></script>
+   
+<script type="text/javascript">
+var navigation1 = responsiveNav(".nav-1");
+</script> 
+</body>
+</html>

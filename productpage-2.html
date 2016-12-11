@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Butchersnbikes</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<!--slider-->
+
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script defer src="js/jquery.flexslider.js"></script>
+
+  
+
+  <script type="text/javascript">
+
+    $(function(){
+
+     // SyntaxHighlighter.all();
+
+    });
+
+    $(window).load(function(){
+
+      $('.flexslider2').flexslider({
+
+        animation: "slide",
+
+        start: function(slider){
+
+          $('body').removeClass('loading');
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+
+<script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth:195,
+        itemMargin:0,
+        asNavFor: '#slider'
+      });
+
+      $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+<!--slider-->
+
+
+ <!--chat dropdown--> 
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script>
+$(function() {
+    $("a").on("click", function() {
+		
+      var $parent = $(this).parent();
+        if ($parent.hasClass('active')) {
+            $parent.removeClass('active');
+        }
+        else{$parent.addClass('active');}
+      
+    });
+});
+</script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+            $(".dropdown dt#dt1 .select-button").click(function() {
+                $(".dropdown dd#dd1").toggle();
+            });
+			$(".dropdown dt#dt2 .select-button").click(function() {
+                $(".dropdown dd#dd2").toggle();
+            });
+			$(".dropdown dt#dt3 .select-button").click(function() {
+                $(".dropdown dd#dd3").toggle();
+            });
+			$(".dropdown dt#dt4 .select-button").click(function() {
+                $(".dropdown dd#dd4").toggle();
+            });
+            $(".dropdown dd#dd1 ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt#dt1 .select-button").html(text);
+                $(".dropdown dd#dd1").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			$(".dropdown dd#dd2 ul li a").click(function() {
+
+                var text = $(this).html();
+                $(".dropdown dt#dt2 .select-button").html(text);
+                $(".dropdown dd#dd2").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			$(".dropdown dd#dd3 ul li a").click(function() {
+                var text = $(this).html();
+
+                $(".dropdown dt#dt3 .select-button").html(text);
+
+                $(".dropdown dd#dd3").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			$(".dropdown dd#dd4 ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt#dt4 .select-button").html(text);
+
+                $(".dropdown dd#dd4").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt#dt1 a span.value").html();
+            }
+			function getSelectedValue(id) {
+                return $("#" + id).find("dt#dt2 a span.value").html();
+            }
+
+			function getSelectedValue(id) {
+                return $("#" + id).find("dt#dt3 a span.value").html();
+            }
+			function getSelectedValue(id) {
+                return $("#" + id).find("dt#dt4 a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd#dd1").hide();
+            });
+			$(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd#dd2").hide();
+            });
+			$(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd#dd3").hide();
+            });
+			$(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd#dd4").hide();
+            });
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+
+
+
+            });
+
+
+
+        });
+
+
+
+    </script>
+
+<!-- Owl Carousel Assets -->
+<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script src="js/modernizr.custom.17475.js"></script>
+   
+   
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="distr/2.0.1/imgslider-2.0.1-min.css">
+<script type="text/javascript" src="distr/2.0.1/imgslider-2.0.1-min.js"></script> 
+  
+  <link rel="stylesheet" type="text/css" href="css/style-popup.css" /> 
+
+</head>
+
+
+
+<body> 
+ <div id="wrapper">
+ 		
+        <div class="nav-1 nav-collapse">
+ 	  <div id="sidebar">
+      	   <div class="sidebar_top">
+           		<div class="builder_box">
+                	 <div class="main-menu">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+            <li class="has-children">
+              <a href="#"><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+              <ul class="sub-menu">
+              	<li class="menu_title">Bike<br />builder</li>
+                <li><a href="#">MK1</a></li>
+                <li><a href="#">MK1-E</a></li>
+                <li><a href="#">MK1-E pro<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                	<ul class="sub-menu">
+              			<li class="menu_title2">choices</li>
+                        <li><a href="#">Color<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        	<ul class="sub-menu">
+                            	<li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-1" value="1" />
+									<label for="radio-1"></label>
+                                   </span>white frame</li>
+                                <li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-2" value="1" />
+									<label for="radio-2"></label>
+                                   </span>black frame</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">drive train<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        	<ul class="sub-menu">
+                            	<li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-3" value="1" />
+									<label for="radio-3"></label>
+                                   </span>white frame</li>
+                                <li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-4" value="1" />
+									<label for="radio-4"></label>
+                                   </span>black frame</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">steering<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        	<ul class="sub-menu">
+                            	<li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-5" value="1" />
+									<label for="radio-5"></label>
+                                   </span>white frame</li>
+                                <li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-6" value="1" />
+									<label for="radio-6"></label>
+                                   </span>black frame</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">seat<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        	<ul class="sub-menu">
+                            	<li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-7" value="1" />
+									<label for="radio-7"></label>
+                                   </span>white frame</li>
+                                <li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-8" value="1" />
+									<label for="radio-8"></label>
+                                   </span>black frame</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">gears<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        	<ul class="sub-menu">
+                            	<li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-9" value="1" />
+									<label for="radio-9"></label>
+                                   </span>white frame</li>
+                                <li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-10" value="1" />
+									<label for="radio-10"></label>
+                                   </span>black frame</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">gears<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        	<ul class="sub-menu">
+                            	<li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-11" value="1" />
+									<label for="radio-11"></label>
+                                   </span>white frame</li>
+                                <li><span class="radio_box">
+                                   	<input type="radio" name="opinions" id="radio-12" value="1" />
+									<label for="radio-12"></label>
+                                   </span>black frame</li>
+                            </ul>
+                        </li>
+              		</ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+
+        
+      </div><!-- .mixed-menu -->
+      </div>
+                </div>
+                
+                <div class="cart_box">
+                	 <a href="#" class="cart_icon"></a>
+                     <span class="cart_quantity">22</span>
+                </div>
+           </div><!--close sidebar_top-->
+           
+           <div class="sidebar_bottom">
+           		<div class="main-menu">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+            <li><a href="about.html">about us</a></li>
+            <li class="has-children active">
+              <a href="products.html">products<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+              <ul class="sub-menu">
+                <li><a href="#">MK1</a></li>
+                <li><a href="#">MK1-E</a></li>
+                <li><a href="#">MK1-E pro</a></li>
+                <li><a href="#">Accesories</a></li>
+              </ul>
+            </li>
+            <li><a href="techspecs.html">tech info</a></li>
+            <li><a href="dealers.html">dealers</a></li>
+            <li><a href="help.html">help</a></li>
+            <li><a href="follow us.html">follow us</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="downloads.html">downloads</a></li>
+          </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+
+        
+      </div><!-- .mixed-menu -->
+      </div><!-- main-menu -->
+           </div><!--close sidebar_bottom-->
+      </div><!--close sidebar-->
+      </div>
+ 
+ 	  <div id="header">
+      	   <div class="container">
+           		<div class="header_left">
+                	 <dl id="sample" class="dropdown">
+                        <dt id="dt3"><span class="select-button">EN</span></dt>
+                        <dd id="dd3">
+                           <ul>
+                                <li><a href="javascript:void();">language1</a></li>
+                                <li><a href="javascript:void();">language2</a></li>
+                                <li><a href="javascript:void();">language3</a></li>
+                                <li><a href="javascript:void();">language4</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div><!--close header_left-->
+                
+                <a href="index.html" class="logo3"><img src="images/logo3.png" alt="" /></a>
+                
+                <div class="header_right">
+                	 <div id="button">
+                     
+                          <a href="#" class="menu_class">Chat Support</a>
+
+                          <div class="the_menu">
+                    			<div class="chat_box">
+                                      <div class="chat_top">
+                                      
+                                      <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller content">
+                    <h5>Morten - 17.25</h5>
+                                                <h6>Thanks for contacting us. My name is Morten, how can I help you?</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                                                
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+                                           
+                                      </div><!--close chat_top-->
+                                      
+                                      <div class="chat_bottom">
+                                           <span class="chat_form"><textarea name="" cols="" rows="" class="chat_textarea" value="Hello ..." onfocus="if (this.value == 'Hello ...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Hello ...';}">Hello ...</textarea></span>
+                                           <span class="chat_form"><button class="button1 chat_button">send</button></span>
+                                      </div><!--close chat_bottom-->
+                                 </div><!--close chat_box-->
+                          </div><!--close the_menu-->
+                    </div><!--close button-->
+                </div><!--close header_right-->
+           </div><!--close container-->
+      </div><!--close header-->
+      
+      
+     
+     <div id="content">
+     	  <div class="container">
+          	   <div class="gray_bg">
+               		
+                    <div id="mainDiv" >
+			<div class="slider2 responsive">
+            	<h1>Mk1-e pro</h1>
+                <div class="logo2"><a href="index.html"><img src="images/logo2.png" alt=""></a></div>
+				<div class="left image">
+					<div class="banner_image1"><img src="images/banner1_img.png"></div>
+                    <div class="banner_text1">
+                        <h2>The Ultimate Tool for Cargo Transportation</h2>
+                        <h3>White</h3>
+                        <a href="#" class="button_add2">Add to builder</a>
+                    </div>
+				</div>
+				<div class="right image">
+					<div class="banner_image2"><img src="images/banner2_img.png"></div>
+                    <div class="banner_text2">
+                        <h2>The Ultimate Tool for Cargo Transportation</h2>
+                        <h3>Black</h3>
+                        <a href="#" class="button_add2">Add to builder</a>
+                    </div>
+				</div>
+			</div>
+		<script type="text/javascript">
+			$('.slider2').slider();
+		</script>
+                    
+                    <section class="slider">
+                        <div id="slider" class="flexslider">
+                          <ul class="slides">
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                            <li><img src="images/big1.jpg" /></li>
+                          </ul>
+                        </div>
+                        <div id="carousel" class="flexslider">
+                          <ul class="slides">
+                            <li><img src="images/small1.png" /><h5>Built to Tilt</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small2.png" /><h5>Rugged & Raw</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small3.png" /><h5>Built to Tilt</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small4.png" /><h5>Rugged & Raw</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small5.png" /><h5>Built to Tilt</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small1.png" /><h5>Built to Tilt</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small2.png" /><h5>Rugged & Raw</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small3.png" /><h5>Built to Tilt</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small4.png" /><h5>Rugged & Raw</h5><h6>A unique way to bike</h6></li>
+                            <li><img src="images/small5.png" /><h5>Built to Tilt</h5><h6>A unique way to bike</h6></li>
+                          </ul>
+                        </div>
+                      </section>
+               
+               		<div class="product_about">
+                    	 <div class="product_about_inner">
+                         	  <h1>The Ultimate Tool<br />for Cargo <br />Transportation</h1>
+                              <h6>Available in<br />black, white<br />or combination.</h6>
+                              <p>Same trike and the same specifications as on the standard Mk1 or Mk1-E, but mounted with a closed lockable box in front with a massive 230 liter volume. Perfect for delivery purposes.<br />
+<br />
+The PRO model is avaiable with or without motor assist. The MK1-E,PRO (shown below) with the powerfull Bosch Perfomance system or as </p>
+                              
+                         </div><!--close product_about_inner-->
+                    </div><!--close product_about-->
+                    
+                    <div class="product_banner"><img src="images/banner2.jpg" alt="" /></div>
+                    
+                    <div class="product_page">
+                    	 <div class="product_row1">
+                         	  <div class="product_image1"><img src="images/product4.jpg" alt="" /></div>
+                              <div class="product_text1">
+                              	   <h2>The Ultimate Tool<br />for Cargo<br />Transportation</h2>
+                                   <p>The PRO model is avaiable with or without motor assist. The MK1-E PRO (shown below) with the power- ful Bosch Perfomance system or as MK1 PRO.</p>
+                              </div>
+                         </div><!--close product_row1-->
+                         
+                         <div class="product_row2">
+                         	  <div class="product_text2">
+                              	   <h2>The Ultimate Tool<br />for Cargo<br />Transportation</h2>
+                                   <p>The PRO model is avaiable with or without motor assist. The MK1-E PRO (shown below) with the power- ful Bosch Perfomance system or as MK1 PRO.</p>
+                              </div>
+                         	  <div class="product_image2"><img src="images/product5.jpg" alt="" /></div>
+                         </div><!--close product_row2-->
+                    </div><!--close product_page-->
+                    
+                    
+                    <div class="assesories">
+                    	 <div class="title_main2">accesories</div>
+                         <div class="product_thumb product_thumb1">
+                         	  <img src="images/thumb1.jpg" alt="" />
+                              <div class="thumb_layer">
+                              	  <div class="text_bottom">
+                              	   <h2>Gates Carbon Drive - Belt Drive System</h2>
+                                   <a href="#" class="button_add show1">Add to builder</a>
+                                   </div>
+                              </div>
+                         </div><!--close product_thumb-->
+                         
+                         <div class="product_thumb product_thumb2">
+                         	  <img src="images/thumb2.jpg" alt="" />
+                              <div class="thumb_layer">
+                              	  <div class="text_bottom">
+                              	   <h2>child pack</h2>
+                                   <a href="#" class="button_add show2">Add to builder</a>
+                                   </div>
+                              </div>
+                         </div><!--close product_thumb-->
+                         
+                         <div class="product_thumb product_thumb3">
+                         	  <img src="images/thumb3.jpg" alt="" />
+                              <div class="thumb_layer">
+                              	  <div class="text_bottom">
+                                  <p>Same trike and the same specifications as on the standard Mk1 or Mk1-E, but mounted with a closed lockable box in front with a massive 230 liter volume.<br />
+
+<a href="#" class="learnmore">Learn more</a></p><br />
+
+                              	   <h2>REELIGHT SL220 - MAGNETIC LIGHTS</h2>
+                                   <a href="#" class="button_add show3">Add to builder</a>
+                                   </div>
+                              </div>
+                         </div><!--close product_thumb-->
+                         
+                         <div class="product_thumb product_thumb4">
+                         	  <img src="images/thumb4.jpg" alt="" />
+                              <div class="thumb_layer">
+                              	  <div class="text_bottom">
+                              	   <h2>HOOD WITH SKYVIEW</h2>
+                                   <a href="#" class="button_add show4">Add to builder</a>
+                                   </div>
+                              </div>
+                         </div><!--close product_thumb-->
+                    </div><!--close assesories-->
+                    
+                    
+                    <div class="product_banner3"><img src="images/product_banner2.jpg" alt="" /></div>
+                    
+               </div><!--close gray_bg-->
+          </div><!--close container-->
+     </div><!--close content-->
+      
+     
+     <div id="footer">
+     	  <div class="container">
+          	   <div class="footer_inner">
+               		<div class="footer_row">
+                    	 <div class="footer_box">
+                         	  <h4>about</h4>
+                              <ul>
+                              		<li><a href="#">About us</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Dealers</a></li>
+                                    <li><a href="#">Contact</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_box">
+                         	  <h4>Products</h4>
+                              <ul>
+                              		<li><a href="#">Mk1</a></li>
+                                    <li><a href="#">Mk1-E</a></li>
+                                    <li><a href="#">Mk1-e pro</a></li>
+                                    <li><a href="#">Accesories</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_box">
+                         	  <h4>help</h4>
+                              <ul>
+                              		<li><a href="#">FAQ’s</a></li>
+                                    <li><a href="#">Shipping and delivery terms</a></li>
+                                    <li><a href="#">Warranty terms</a></li>
+                                    <li><a href="#">Payment terms</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_box">
+                         	  <h4>join our mailing list</h4>
+                              <span class="footer_search"><input name="" type="text" class="search_input" value="Your E-mail" onfocus="if (this.value == 'Your E-mail') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your E-mail';}"/></span>
+                              <span class="footer_social">
+                              	  <a href="#" class="icon1"></a>
+                                  <a href="#" class="icon2"></a>
+                                  <a href="#" class="icon3"></a>
+                                  <a href="#" class="icon4"></a>
+                              </span>
+                         </div><!--close footer_box-->
+                         
+                         <div class="footer_mobile1">
+                         	  <ul>
+                              		<li><a href="#">About us</a></li>
+                                    <li><a href="#">Dealers</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">Help</a></li>
+                              </ul>
+                         </div>
+                         <div class="footer_mobile2">
+                         	   <a href="#" class="icon1"></a>
+                               <a href="#" class="icon2"></a><br />
+                               <a href="#" class="icon3"></a>
+                               <a href="#" class="icon4"></a>
+                         </div>
+                    </div><!--close footer_row-->
+               </div><!--close footer_inner-->
+          </div><!--close container-->
+     </div><!--close footer-->
+      
+ </div><!--close wrapper-->
+ 
+ <div id="pop1" class="simplePopup">
+ 	
+    <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller">
+                    <div class="popup_text">
+    	 <h2>GATES CARBON DRIVE - BELT DRIVE SYSTEM</h2>
+         <p>Same trike and the same specifications as on the standard Mk1 or Mk1-E, but mounted with a closed lockable box in front with a massive 230 liter volume.</p>
+         <a href="#" class="button_add">Add to builder</a>
+    </div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+</div><!--close pop1-->
+
+<div id="pop2" class="simplePopup">
+ 	
+    <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller">
+                    <div class="popup_text">
+    	 <h2>CHILD PACK</h2>
+         <p>Same trike and the same specifications as on the standard Mk1 or Mk1-E, but mounted with a closed lockable box in front with a massive 230 liter volume.</p>
+         <a href="#" class="button_add">Add to builder</a>
+    </div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+</div><!--close pop2-->
+
+<div id="pop3" class="simplePopup">
+ 	
+    <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller">
+                    <div class="popup_text">
+    	 <h2>REELIGHT SL220 - MAGNETIC LIGHTS</h2>
+         <p>Same trike and the same specifications as on the standard Mk1 or Mk1-E, but mounted with a closed lockable box in front with a massive 230 liter volume.</p>
+         <a href="#" class="button_add">Add to builder</a>
+    </div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+</div><!--close pop3-->
+
+<div id="pop4" class="simplePopup">
+ 	
+    <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller">
+                    <div class="popup_text">
+    	 <h2>HOOD WITH SKYVIEW</h2>
+         <p>Same trike and the same specifications as on the standard Mk1 or Mk1-E, but mounted with a closed lockable box in front with a massive 230 liter volume.</p>
+         <a href="#" class="button_add">Add to builder</a>
+    </div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+    <div class="popup_image"><img src="images/popup_image.jpg" alt="" /></div>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+</div><!--close pop4-->
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript">
+			
+			$( '#carousel' ).elastislide( {
+				minItems : 1
+			} );
+			$( '#carousel2' ).elastislide( {
+				minItems : 1
+			} );
+			$( '#carousel3' ).elastislide( {
+				minItems : 1
+			} );
+			$( '#carousel4' ).elastislide( {
+				minItems : 1
+			} );
+			
+		</script>
+        
+        <script src="js/jquery.simplePopup.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $('.show1').click(function(){
+	$('#pop1').simplePopup();
+    });
+  
+    $('.show2').click(function(){
+	$('#pop2').simplePopup();
+    });  
+	
+	$('.show3').click(function(){
+	$('#pop3').simplePopup();
+    });
+  
+    $('.show4').click(function(){
+	$('#pop4').simplePopup();
+    });  
+  
+});
+
+</script>
+
+<script src="js/baron.js"></script>
+<script src="js/script.js"></script>
+
+
+
+  
+<!--responsive navigation-->
+
+<link rel="stylesheet" href="responsive-nav.css" />
+
+<script src="js/responsive-nav.js" type="text/javascript"></script>
+
+<!--responsive navigation-->
+
+<script type="text/javascript" src="js/customInput.jquery.js"></script>
+		
+	<script type="text/javascript">
+	// Run the script on DOM ready:
+	$(function(){
+		$('input').customInput();
+	});
+	</script>
+
+ <link rel="stylesheet" href="css/menu.css">  
+   <script src="js/index.js"></script>
+   
+<script type="text/javascript">
+var navigation1 = responsiveNav(".nav-1");
+</script>   
+</body>
+
+</html>
+
