@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> &nbsp; Butchers & Bicycles</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" type="image/png" href="images/logo3.png"/>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!--slider-->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+ <script src="js/jquery-1.10.2.js"></script>
+   <!--chat dropdown-->
+<script type="text/javascript" src="js/slider.js"></script>
+ <script>
+/* $(function() {
+    $("a").on("click", function() {
+
+      var $parent = $(this).parent();
+        if ($parent.hasClass('active')) {
+            $parent.removeClass('active');
+        }
+        else{$parent.addClass('active');}
+
+    });
+}); */
+</script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+			$(".dropdown dt#dt3 .select-button").click(function() {
+                $(".dropdown dd#dd3").toggle();
+            });
+			$(".dropdown dd#dd3 ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt#dt3 .select-button").html(text);
+                $(".dropdown dd#dd3").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			function getSelectedValue(id) {
+                return $("#" + id).find("dt#dt3 a span.value").html();
+            }
+			$(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd#dd3").hide();
+            });
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body class="common">
+ <div id="wrapper">
+
+ 	<div class="nav-1 nav-collapse">
+ 	  <div id="sidebar">
+      	   <div class="sidebar_top">
+           		<div class="builder_box">
+                	 <div class="main-menu">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+            <li class="has-children">
+              <a href="#"><button class="dropdown-toggle" aria-expanded="false"></button></a>
+              <ul class="sub-menu">
+              	<li class="menu_title">Bike<br />builder</li>
+                <li><a href="builder.html">MK1<button class="dropdown-toggle" aria-expanded="false"></button></a>
+                </li>
+                <li><a href="builder.html">MK1-E</a>
+                </li>
+                <li><a href="builder.html">MK1-E pro</a>
+
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+
+      </div><!-- .mixed-menu -->
+      </div>
+                </div>
+
+                <div class="cart_box">
+                	 <a href="#" class="cart_icon"></a>
+                     <span class="cart_quantity"></span>
+                </div>
+           </div><!--close sidebar_top-->
+
+           <div class="sidebar_bottom">
+           		<div class="main-menu">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+
+            <li class="has-children">
+              <a href="products.html">products<button class="dropdown-toggle" aria-expanded="false"></button></a>
+              <ul class="sub-menu">
+                <li><a href="productpage-mk1.html">Mk1</a></li>
+                <li><a href="productpage-mk1e.html">Mk1-E</a></li>
+                <li><a href="productpage-mk1e-pro.html">Mk1-E Pro</a></li>
+                <li><a href="products.html">Accesories</a></li>
+              </ul>
+            </li>
+            <li><a href="techspecs.html">tech info</a></li>
+            <li><a href="dealers.html">dealers</a></li>
+            <li><a href="about.html">about us</a></li>
+            <li><a href="follow us.html">follow us</a></li>
+            <li><a href="help.html">help</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li class="active"><a href="downloads.html">downloads</a></li>
+          </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+
+      </div><!-- .mixed-menu -->
+      </div><!-- main-menu -->
+           </div><!--close sidebar_bottom-->
+      </div><!--close sidebar-->
+      </div>
+
+
+ 	  <div id="header">
+      	   <div class="container">
+           		<div class="header_left">
+                	 <dl id="sample" class="dropdown">
+                        <dt id="dt3"><span class="select-button">EN</span></dt>
+                        <dd id="dd3">
+                           <ul>
+                                <li><a href="javascript:void(0);">language1</a></li>
+                                <li><a href="javascript:void(0);">language2</a></li>
+                                <li><a href="javascript:void(0);">language3</a></li>
+                                <li><a href="javascript:void(0);">language4</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div><!--close header_left-->
+
+                <a href="index.html" class="logo3"><img src="images/logo3.png" alt="" /></a>
+
+                <div class="header_right">
+                	 <div id="button">
+
+                          <a href="#" class="menu_class">Chat Support</a>
+                          <div class="the_menu">
+                    			<div class="chat_box">
+                                      <div class="chat_top">
+
+                                      <div class="baron baron__root baron__clipper _ubuntu12">
+                <div class="baron__scroller content">
+                    <h5>Morten - 17.25</h5>
+                                                <h6>Thanks for contacting us. My name is Morten, how can I help you?</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+
+                                                <h5>You - 17.28</h5>
+                                                <h6>Jibjib</h6>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                        <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                </div>
+            </div>
+
+                                      </div><!--close chat_top-->
+
+                                      <div class="chat_bottom">
+                                           <span class="chat_form"><textarea name="" cols="" rows="" class="chat_textarea" value="Hello ..." onfocus="if (this.value == 'Hello ...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Hello ...';}">Hello ...</textarea></span>
+                                           <span class="chat_form"><button class="button1 chat_button">send</button></span>
+                                      </div><!--close chat_bottom-->
+                                 </div><!--close chat_box-->
+                          </div><!--close the_menu-->
+                    </div><!--close button-->
+                </div><!--close header_right-->
+           </div><!--close container-->
+      </div><!--close header-->
+     <div id="content">
+     	  <div class="container">
+          	   <div class="gray_bg">
+               		<div class="download_section">
+                    	 <div class="logo2"><a href="index.html"><img src="images/logo2.png" alt="" /></a></div>
+                         <div class="download_inner">
+                         	  <h1>downloads</h1>
+                              <div class="download_table_div">
+                              	   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="download_table">
+                                      <tr>
+                                        <td class="download_td1">Logo</td>
+                                        <td class="download_td2"><a href="#">Download (eps)</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="download_td1">Pictures</td>
+                                        <td class="download_td2"><a href="#">Download (jpeg)</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="download_td1">Videos</td>
+                                        <td class="download_td2"><a href="#">Download (mp4)</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="download_td1">Latest Catalog</td>
+                                        <td class="download_td2"><a href="#">Download (pdf)</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="download_td1">Manuals</td>
+                                        <td class="download_td2"><a href="#">Download (pdf)</a></td>
+                                      </tr>
+                                    </table>
+                                    <div class="downloads_disclaimer">
+                                        <p>All images courtesy of Butchers & Bicycles ApS.</p>
+                                        <p>If you have any special requests, please <a href="contact.html" style="text-decoration:none; color:inherit"><strong>contact </strong></a> us directly.</p>
+                                    </div>
+                              </div>
+                         </div><!--close download_inner-->
+                    </div><!--close download_section-->
+               </div><!--close gray_bg-->
+          </div><!--close container-->
+     </div><!--close content-->
+
+     <div id="footer">
+     	  <div class="container">
+          	   <div class="footer_inner">
+               		<div class="footer_row">
+                    	 <div class="footer_box">
+                         	  <h4>about</h4>
+                              <ul>
+                              		<li><a href="about.html">About us</a></li>
+                                  <li><a href="techspecs.html">Tech Info</a></li>
+                                    <li><a href="about.html#the-team">The Team</a></li>
+                                    <li><a href="dealers.html">Dealers</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+
+                         <div class="footer_box">
+                         	  <h4>Products</h4>
+                              <ul>
+                              		<li><a href="productpage-mk1.html">Mk1</a></li>
+                                    <li><a href="productpage-mk1e.html">Mk1-E</a></li>
+                                    <li><a href="productpage-mk1e-pro.html">Mk1-E Pro</a></li>
+                                    <li><a href="products.html">Accesories</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+
+                         <div class="footer_box">
+                         	  <h4>help</h4>
+                              <ul>
+                              		<li><a href="help.html">FAQ’s</a></li>
+                                    <li><a href="help.html#shipping-terms">Shipping and delivery terms</a></li>
+                                    <li><a href="help.html#warranty-terms">Warranty terms</a></li>
+                                    <li><a href="help.html#payment-terms">Payment terms</a></li>
+                              </ul>
+                         </div><!--close footer_box-->
+
+                         <div class="footer_box">
+                         	  <!--  <h4>join our mailing list</h4>
+                               <span class="footer_search"><input name="" type="text" class="search_input" value="Your E-mail" onfocus="if (this.value == 'Your E-mail') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your E-mail';}"/></span>  -->
+                              <span class="footer_social">
+                              	  <a href="#" class="icon1"></a>
+                                  <a href="#" class="icon2"></a>
+                                  <a href="#" class="icon3"></a>
+                                  <a href="#" class="icon4"></a>
+                              </span>
+                         </div><!--close footer_box-->
+
+                         <div class="footer_mobile1">
+                         	  <ul>
+                              		<li><a href="about.html">About us</a></li>
+                                  <li><a href="techspecs.html">Tech Info</a></li>
+                                    <li><a href="dealers.html">Dealers</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="help.html">Help</a></li>
+                              </ul>
+                         </div>
+                         <div class="footer_mobile2">
+                         	   <a href="#" class="icon1"></a>
+                               <a href="#" class="icon2"></a><br />
+                               <a href="#" class="icon3"></a>
+                               <a href="#" class="icon4"></a>
+                         </div>
+                    </div><!--close footer_row-->
+               </div><!--close footer_inner-->
+          </div><!--close container-->
+     </div><!--close footer-->
+
+ </div><!--close wrapper-->
+<script src="js/baron.js"></script>
+<script src="js/script.js"></script>
+<!--responsive navigation-->
+<link rel="stylesheet" href="responsive-nav.css" />
+<script src="js/responsive-nav.js" type="text/javascript"></script>
+<!--responsive navigation-->
+<script src="js/index.js"></script>
+
+<script type="text/javascript">
+var navigation1 = responsiveNav(".nav-1");
+</script>
+</body>
+</html>
