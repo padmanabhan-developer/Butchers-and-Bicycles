@@ -1,10 +1,6 @@
 <?php
 require "dealer.php";
 
-$d = new dealerData();
-$dd = $d->getDealerInfo(22);
-var_dump($dd);
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -362,14 +358,21 @@ The PRO model is avaiable with or without motor assist. The MK1-E,PRO (shown bel
 
                     	 <div class="map_left">
                        <span class="map_title_new">dealers</span>
-                       <div class="map_infowindow" style="">
-                         	  <div class="map_icon"><img src="mapmarker.png" alt="" /></div>
-                              <h4>Denmark</h4>
-                              <h5>OrangeBikeConcept</h5>
-                              <h6>Slagtehusgade 5A<br />1715 Copenhagen V</h6>
-                              <a href="#" class="map_link">Website</a>
-                              <div class="map_logo"><img src="images/side_logo.png" alt="" /></div>
-                              </div>
+<?php
+foreach($dealers_info as $dealer){
+?>
+<div class="map_infowindow" style="">
+<div class="map_icon"><img src="mapmarker.png" alt="" /></div>
+<h4>Denmark</h4>
+<h5>OrangeBikeConcept</h5>
+<h6>Slagtehusgade 5A<br />1715 Copenhagen V</h6>
+<a href="#" class="map_link">Website</a>
+<div class="map_logo"><img src="images/side_logo.png" alt="" /></div>
+</div>
+<?php
+}
+?>
+
                          </div>
                          <div class="map_right"><div id="map"></div></div>
                          </div>
@@ -464,7 +467,8 @@ The PRO model is avaiable with or without motor assist. The MK1-E,PRO (shown bel
 <script type="text/javascript">
 var navigation1 = responsiveNav(".nav-1");
 </script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+<script type="text/javascript" src="js/dealer.json"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-DlVfh0fBpMmqFwwVdiiSeveWUln7tY&callback=initMap" type="text/javascript"></script>
 <script type="text/javascript" src="js/markerclusterer.js"></script>
 <script type="text/javascript" src="js/gmap.js"></script>
 </body>
