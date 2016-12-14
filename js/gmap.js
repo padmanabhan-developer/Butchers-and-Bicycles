@@ -13,7 +13,13 @@ json.forEach(function(obj) { console.log(obj.id); });
 
 */
 
-var dealerdata = [{
+
+var dealerInfoBesideMap = '';
+var myLatLng = new Array();
+var dealerValues = new Array();
+var storeInfo = new Array();
+
+var dealerData = [{
     "Address": "Globe House, 37 Bermondsey Street, SE1 3JW London, England, Ben Jaconelli",
     "Website": "www.fullycharged.com",
     "Name": "Fully Charged",
@@ -435,63 +441,58 @@ var dealerdata = [{
     "Longitude": 153.049241
 }];
 
-var dealerInfoBesideMap = '';
-dealerdata.forEach(function(obj) { 
-    // console.log(obj.Website);
-    dealerInfoBesideMap += "<div class='map_infowindow' style='display:none' id='map-store-"+obj.id+"'>";
+for(i=0;i<dealerData.length;i++){
+    myLatLng[i] = {"lat":dealerData[i].Latitude, "lng":dealerData[i].Longitude};
+    dealerValues[i] = { "Address": dealerData[i].Address, "Website": dealerData[i].Website, "Name": dealerData[i].Name, "Latitude": dealerData[i].Latitude, "dealer_id":dealerData[i].dealer_id, "Longitude":dealerData[i].Longitude };
+    dealerInfoBesideMap += "<div dealerID="+ dealerData[i].dealer_id+" class='map-store-"+ dealerData[i].dealer_id+"' style='display:block' id='store-marker'>";
     dealerInfoBesideMap += "<div class='map_icon'><img src='mapmarker.png' alt='' /></div>";
     dealerInfoBesideMap += "<h4>COUNTRY</h4>";
-    dealerInfoBesideMap += "<h5>"+obj.Name+"</h5>";
-    dealerInfoBesideMap += "<h6>"+obj.Address+"</h6>";
-    dealerInfoBesideMap += "<a href='#' class='map_link'>"+obj.Website+"</a>";
+    dealerInfoBesideMap += "<h5>"+ dealerData[i].Name+"</h5>";
+    dealerInfoBesideMap += "<h6>"+ dealerData[i].Address+"</h6>";
+    dealerInfoBesideMap += "<a href='#' class='map_link'>"+ dealerData[i].Website+"</a>";
     dealerInfoBesideMap += "<div class='map_logo'><img src='images/side_logo.png' alt='' /></div></div>";
-    }
-);
-
-var dealerData = "";
-var myLatLng = new Array();
-
-for(i=0;i<dealerData.length;i++){
-  myLatLng[i] = {"lat":dealerData[i].Latitude, "lng":dealerData[i].Longitude};
+    storeInfo[i] = dealerInfoBesideMap;
+    dealerInfoBesideMap = "";
 }
 
-// console.log(myLatLng);
-
-// function initMap(){
 window.initMap = function(){
-
     var mapDiv = document.getElementById('map');
-
-    // var myLatLng = {lat: 57.554365, lng: 18.480604};
-
     var map = new google.maps.Map(mapDiv, {
         center: {lat: 52.605842, lng: 10.222253},
         scrollwheel: true,
         zoom: 4
     });
     var markers = [];
-    // var iconBase = 'images';
     var iconBase = '';
     for(i=0 ; i<myLatLng.length; i++){
-            var dynamicLatLng = myLatLng[i]
-            var marker = new google.maps.Marker({
-              position: dynamicLatLng,
-              map: map,
-              icon: iconBase + 'mapmarker.png'
-            });
-            marker.addListener('click', function() {
+        var dynamicLatLng = myLatLng[i];
+        var dynamicDealerInfo = dealerValues[i];
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+          position: dynamicLatLng,
+          map: map,
+          icon: iconBase + 'mapmarker.png',
+        });
+        marker.dealer_store_id = dynamicDealerInfo.dealer_id;
+        marker.addListener('click', function() {
             $(".map_infowindow").hide();
-            $(".map_infowindow").fadeIn(500);
-            });
-            markers.push(marker);
+            $("#store-marker").hide();
+            $(".map_infowindow").fadeIn(400);
+        });
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                $(".map_infowindow").html(storeInfo[i]);
+            }
+        })(marker, i));
+        markers.push(marker);
     }
+
     var markerCluster = new MarkerClusterer(map, markers);
     markerCluster.gridSize = 10;
     markerCluster.maxZoom = 2;
     markerCluster.setGridSize(20);
     markerCluster.setMaxZoom(3);
     // markerCluster.fitMapToMarkers(true);
-    console.log(markerCluster.getGridSize());
     map.set('styles',[
         {
             "featureType": "all",
@@ -744,12 +745,4 @@ window.initMap = function(){
         }
 ]);
 
-
-/*var marker = new google.maps.Marker({
-  position: myLatLng,
-  map: map,
-  icon: iconBase + 'info-i_maps.png'
-});*/
-
-
-      }
+}

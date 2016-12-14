@@ -1,5 +1,5 @@
 <?php
-require "dealer.php";
+// require "dealer.php";
 
 ?>
 
