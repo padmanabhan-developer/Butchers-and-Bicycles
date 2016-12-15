@@ -135,7 +135,6 @@ width: 25px;}
 .map_left h6{color:#fff; font-size:12px; font-family: 'georgia'; line-height:22px; padding:0 0 27px 0;}
 .map_link{float:left; text-decoration:none; color:#fff; font-size:12px; font-family:Arial, Helvetica, sans-serif; background:url(images/line.png) repeat-x left bottom; padding:0 0 1px 0;}
 
-
 #footer{float:left; width:100%;   /* position: relative;*/ z-index: 99999;}
 .footer_inner{float:left; width:100%; background:#2b2b2b; padding:100px 97px 80px 190px;}
 .footer_box{float:left; width:25%;}
@@ -363,6 +362,7 @@ border-radius: 4px;font-family: 'georgiai'; width:100%;}
 .contact_map_left h4{color:#fff; font-size:18px; font-family: 'AkzidenzGroteskBEBoldCn';  line-height:22px; text-transform:uppercase; padding:0 0 24px 0;}
 .contact_map_left h5{color:#fff; font-size:14px; font-family: 'georgia';  line-height:22px; padding:0 0 23px 0;}
 .contact_map_left h6{color:#fff; font-size:12px; font-family: 'georgia'; line-height:22px; padding:0 0 0 0;}
+
 .contact_map{float:left; width:100%; margin:20px 0 0 0; position:relative;}
 .text_above_contact_map{
     color:#2b2b2b;
